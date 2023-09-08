@@ -1,0 +1,42 @@
+/* Style for the "Previous" arrow */
+.prev-arrow {
+    left: 2cm; /* Move "Previous" arrow 2 cm to the right */
+}
+
+/* Style for the "Next" arrow */
+.next-arrow {
+    right: 2cm; /* Move "Next" arrow 2 cm to the left */
+}
+/* Style for the image container */
+.image-container {
+    text-align: center; /* Center-align the images */
+    margin: 20px 0; /* Add space around the images */
+}
+
+/* Style for the slideshow images */
+.slideshow-image {
+    max-width: 100%; /* Set max width to 100% for mobile responsiveness */
+    display: none; /* Hide images by default */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Style for the navigation arrows */
+.navigation-arrow {
+    cursor: pointer;
+    width: 40px; /* Adjust arrow size for mobile */
+    height: 40px; /* Adjust arrow size for mobile */
+    z-index: 1; /* Ensure arrows appear above images */
+    position: absolute; /* Position the arrows absolutely */
+    top: 50%; /* Align arrows vertically to the middle */
+    transform: translateY(-50%); /* Center vertically */
+}
+
+/* Style for the "Previous" arrow */
+.prev-arrow {
+    left: 10px; /* Position "Previous" arrow to the left */
+}
+
+/* Style for the "Next" arrow */
+.next-arrow {
+    right: 10px; /* Position "Next" arrow to the right */
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Pod</title>
+    <style>
+        /* Set the background color to white and text color to black */
+        body {
+            background-color: white;
+            color: black;
+            text-align: left; /* Left alignment */
+            font-family: "Cocomat Ultralight", sans-serif; /* Specify the font for the body */
+            margin: 0; /* Remove margins for a full-width experience */
+            padding: 0; /* Remove padding for a full-width experience */
+        }
+
+        /* Style for the title "Asrama Mahasiswa Nusantara" */
+        .amn-title {
+            font-size: 30px; /* Adjust font size for mobile */
+            text-align: center; /* Center the title */
+            margin-top: 20px; /* Add space at the top */
+        }
+
+        /* Style for the text description */
+        .description {
+            font-size: 15px; /* Adjust font size for mobile */
+            font-family: "Typo Formal", sans-serif; /* Specify the font for the description */
+            text-align: justify; /* Set text alignment to justify */
+            margin: 10px 20px; /* Add space around the description */
+        }
+
+        /* Style for the image container */
+        .image-container {
+            text-align: center; /* Center-align the images */
+            margin: 20px 0; /* Add space around the images */
+            position: relative; /* Create a positioning context for absolute elements */
+        }
+
+        /* Style for the slideshow images */
+        .slideshow-image {
+            max-width: 75%; /* Set max width to 100% for mobile responsiveness */
+            display: none; /* Hide images by default */
+            margin: 0 auto; /* Center the image horizontally */
+        }
+
+        /* Style for the navigation arrows */
+        .navigation-arrow {
+            cursor: pointer;
+            width: 40px; /* Adjust arrow size for mobile */
+            height: 40px; /* Adjust arrow size for mobile */
+            z-index: 1; /* Ensure arrows appear above images */
+            position: absolute; /* Position the arrows absolutely */
+            top: 50%; /* Align arrows vertically to the middle */
+            transform: translateY(-50%); /* Center vertically */
+        }
+
+        /* Style for the "Previous" arrow */
+        .prev-arrow {
+            left: 10px; /* Position "Previous" arrow to the left */
+        }
+
+        /* Style for the "Next" arrow */
+        .next-arrow {
+            right: 10px; /* Position "Next" arrow to the right */
+        }
+    </style>
+    <!-- Include your external JavaScript file -->
+    <script src="style.js"></script>
+    <!-- Include the Cocomat Ultralight and Typo Formal fonts using a CSS import or links to web font files if necessary -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cocomat+Ultralight&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Typo+Formal&display=swap">
+</head>
+<body>
+    <!-- Title "Asrama Mahasiswa Nusantara" -->
+    <div class="amn-title">
+        Yoga Pod
+    </div>
+
+    <!-- Text description -->
+    <div class="description">
+        Project Yoga pod ini berlokasi di tapak Masagi Coffee, Ciumbuleuit, Bandung. dalam desain ini, Pembelajaran difokuskan tentang abstraksi gerak manusia
+        menjadi sebuah Yoga Pod yang unik secara bentuk. Garis-garis diambil dari gerakan Yoga Bikram dan Yoga Ashtanga, dengan mengkomposisikan garis-garis yang
+        diambil dari 2 pose ini, saya membuat sebuah pod yang memiliki bentuk berlayer dengan menggunakan material Membran ETF-E untuk menciptakan bukaan translusen
+        yang memberikan privasi sekaligus menciptakan permainan bayangan dari dedaunan pohon di atasnya. Masing-masing pod akan digunakan hanya untuk 1 orang
+        dan di letakan pada site secara menyebar tanpa berhadapan sehingga pengguna pod tidak bisa dilihat oleh pengguna pod yang lain. 
+    </div>
+
+    <!-- Image container for the slideshow -->
+    <div class="image-container">
+        <!-- "Previous" arrow image -->
+        <img class="navigation-arrow prev-arrow" src="leftarrow.png" alt="Previous">
+        <!-- Image slideshow -->
+        <div class="slideshow-image-container">
+            <!-- Current image count will be displayed here -->
+            <div class="image-count"></div>
+            <img class="slideshow-image" src="konsep.png" alt="Image 1">
+                    <img class="slideshow-image" src="denah.png" alt="Image 2">
+                    <img class="slideshow-image" src="potongan.png" alt="Image 3">
+                    <img class="slideshow-image" src="tampak.png" alt="Image 4">
+                    <img class="slideshow-image" src="isometri.png" alt="Image 5">
+                    <img class="slideshow-image" src="maket.png" alt="Image 6">
+        <!-- "Next" arrow image -->
+        <img class="navigation-arrow next-arrow" src="rightarrow.png" alt="Next">
+    </div>
+
+    <!-- JavaScript for image slideshow -->
+    <script>
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.slideshow-image');
+        const prevArrow = document.querySelector('.prev-arrow');
+        const nextArrow = document.querySelector('.next-arrow');
+
+        function showImage(index) {
+            images.forEach((image, i) => {
+                if (i === index) {
+                    image.style.display = 'block';
+                } else {
+                    image.style.display = 'none';
+                }
+            });
+        }
+
+        // Initial display
+        showImage(currentImageIndex);
+
+        // Function to navigate to the previous image
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            showImage(currentImageIndex);
+        }
+
+        // Function to navigate to the next image
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            showImage(currentImageIndex);
+        }
+
+        // Add event listeners for arrow clicks
+        prevArrow.addEventListener('click', prevImage);
+        nextArrow.addEventListener('click', nextImage);
+    </script>
+    </body>
+</html>

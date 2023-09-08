@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asrama Mahasiswa Nusantara</title>
+    <style>
+        /* Set the background color to white and text color to black */
+        body {
+            background-color: white;
+            color: black;
+            text-align: left; /* Left alignment */
+            font-family: "Cocomat Ultralight", sans-serif; /* Specify the font for the body */
+            margin: 0; /* Remove margins for a full-width experience */
+            padding: 0; /* Remove padding for a full-width experience */
+        }
+
+        /* Style for the title "Asrama Mahasiswa Nusantara" */
+        .amn-title {
+            font-size: 30px; /* Adjust font size for mobile */
+            text-align: center; /* Center the title */
+            margin-top: 20px; /* Add space at the top */
+        }
+
+        /* Style for the text description */
+        .description {
+            font-size: 15px; /* Adjust font size for mobile */
+            font-family: "Typo Formal", sans-serif; /* Specify the font for the description */
+            text-align: justify; /* Set text alignment to justify */
+            margin: 10px 20px; /* Add space around the description */
+        }
+
+        /* Style for the image container */
+        .image-container {
+            text-align: center; /* Center-align the images */
+            margin: 20px 0; /* Add space around the images */
+            position: relative; /* Create a positioning context for absolute elements */
+        }
+
+        /* Style for the slideshow images */
+        .slideshow-image {
+            max-width: 75%; /* Set max width to 100% for mobile responsiveness */
+            display: none; /* Hide images by default */
+            margin: 0 auto; /* Center the image horizontally */
+        }
+
+        /* Style for the navigation arrows */
+        .navigation-arrow {
+            cursor: pointer;
+            width: 40px; /* Adjust arrow size for mobile */
+            height: 40px; /* Adjust arrow size for mobile */
+            z-index: 1; /* Ensure arrows appear above images */
+            position: absolute; /* Position the arrows absolutely */
+            top: 50%; /* Align arrows vertically to the middle */
+            transform: translateY(-50%); /* Center vertically */
+        }
+
+        /* Style for the "Previous" arrow */
+        .prev-arrow {
+            left: 10px; /* Position "Previous" arrow to the left */
+        }
+
+        /* Style for the "Next" arrow */
+        .next-arrow {
+            right: 10px; /* Position "Next" arrow to the right */
+        }
+    </style>
+    <!-- Include your external JavaScript file -->
+    <script src="style.js"></script>
+    <!-- Include the Cocomat Ultralight and Typo Formal fonts using a CSS import or links to web font files if necessary -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cocomat+Ultralight&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Typo+Formal&display=swap">
+</head>
+<body>
+    <!-- Title "Asrama Mahasiswa Nusantara" -->
+    <div class="amn-title">
+        Asrama Mahasiswa Nusantara
+    </div>
+
+    <!-- Text description -->
+    <div class="description">
+        Asrama Mahasiswa Nusantara adalah sebuah asrama khusus untuk mahasiswa kampus negri, mulai dari 
+        semester 1 hingga 4. Project ini berlokasi di Bandung, Jalan P.H Mustofa, Sebuah area urban yang
+        penuh dengan aktivitas komersil di sekitar kawasannya. Site nya sendiri memiliki bentuk yang unik,
+        ketika pertama didatangi. proyek ini bertujuan untuk membangun sebuah hunian khusus bagi mahasiswa 
+        dari berbagai daerah di nusantara yang sedang menempuh pendidikan tinggi dari semester 1 hingga 4 
+        di sebuah perguruan tinggi negeri. asrama ini dirancang untuk memberikan fasilitas hunian yang nyaman, 
+        mendukung kegiatan akademik, dan mempromosikan interaksi sosial antara mahasiswa dari berbagai latar 
+        belakang budaya dan etnis. Pendekatan desain ini muncul ketika saya melihat bahwa kawasan yang dipenuhi 
+        dengan aktivitas komersil dan jalan raya yang ramai membuat site tidak memiliki view yang baik, 
+        sehingga desain site difokuskan untuk memaksimalkan view gain bagi para penghuni terutama untuk 
+        penghuni bangunan asrama.
+    </div>
+
+    <!-- Image container for the slideshow -->
+    <div class="image-container">
+        <!-- "Previous" arrow image -->
+        <img class="navigation-arrow prev-arrow" src="leftarrow.png" alt="Previous">
+        <!-- Image slideshow -->
+        <div class="slideshow-image-container">
+            <!-- Current image count will be displayed here -->
+            <div class="image-count"></div>
+            <img class="slideshow-image" src="TAMPAK A DAN B EDITED.png" alt="Image 1">
+                    <img class="slideshow-image" src="TAMPAK C DAN D.jpg" alt="Image 2">
+                    <img class="slideshow-image" src="DENAH LANTAI DASAR.png" alt="Image 3">
+                    <img class="slideshow-image" src="DENAH LANTAI 2 DAN 3.png" alt="Image 4">
+                    <img class="slideshow-image" src="DENAH LANTAI 4 DAN ATAP.png" alt="Image 5">
+                    <img class="slideshow-image" src="POTONGAN A DAN B EDITED.png" alt="Image 6">
+                    <img class="slideshow-image" src="BLOKPLAN.png" alt="Image 7">
+                    <img class="slideshow-image" src="REAL SITEPLAN.png" alt="Image 8">
+                    <img class="slideshow-image" src="DENAH PENUNJANG LANTAI DASAR.png" alt="Image 9">
+                    <img class="slideshow-image" src="DENAH BASEMENT.png" alt="Image 10">
+                    <img class="slideshow-image" src="POTONGAN A B C PENUNJANG.png" alt="Image 8">
+                    <img class="slideshow-image" src="TAMPAK ABCD PENUNJANG.png" alt="Image 8">
+                    <img class="slideshow-image" src="DENAH KOMERSIL.png" alt="Image 8">
+                    <img class="slideshow-image" src="TAMPAK KOMERIL SEMUA.png" alt="Image 8">
+                    <img class="slideshow-image" src="UNIT TIPE II.png" alt="Image 8">
+                    <img class="slideshow-image" src="DETAIL UNIT TIPE IV.png" alt="Image 8">
+                    <img class="slideshow-image" src="konsep bentuk.PNG" alt="Image 8">
+                    <img class="slideshow-image" src="konsep struktur.PNG" alt="Image 8">
+                    <img class="slideshow-image" src="konsep utilitas.PNG" alt="Image 8">
+                    <img class="slideshow-image" src="maket1.jpg" alt="Image 10">
+                    <img class="slideshow-image" src="maket2.jpg" alt="Image 10">
+                    <img class="slideshow-image" src="maket3.jpg" alt="Image 10">
+        </div>
+        <!-- "Next" arrow image -->
+        <img class="navigation-arrow next-arrow" src="rightarrow.png" alt="Next">
+    </div>
+
+    <!-- JavaScript for image slideshow -->
+    <script>
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.slideshow-image');
+        const prevArrow = document.querySelector('.prev-arrow');
+        const nextArrow = document.querySelector('.next-arrow');
+
+        function showImage(index) {
+            images.forEach((image, i) => {
+                if (i === index) {
+                    image.style.display = 'block';
+                } else {
+                    image.style.display = 'none';
+                }
+            });
+        }
+
+        // Initial display
+        showImage(currentImageIndex);
+
+        // Function to navigate to the previous image
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            showImage(currentImageIndex);
+        }
+
+        // Function to navigate to the next image
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            showImage(currentImageIndex);
+        }
+
+        // Add event listeners for arrow clicks
+        prevArrow.addEventListener('click', prevImage);
+        nextArrow.addEventListener('click', nextImage);
+    </script>
+    </body>
+</html>

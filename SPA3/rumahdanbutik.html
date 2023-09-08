@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Tinggal dan Butik</title>
+    <style>
+        /* Set the background color to white and text color to black */
+        body {
+            background-color: white;
+            color: black;
+            text-align: left; /* Left alignment */
+            font-family: "Cocomat Ultralight", sans-serif; /* Specify the font for the body */
+            margin: 0; /* Remove margins for a full-width experience */
+            padding: 0; /* Remove padding for a full-width experience */
+        }
+
+        /* Style for the title "Asrama Mahasiswa Nusantara" */
+        .amn-title {
+            font-size: 30px; /* Adjust font size for mobile */
+            text-align: center; /* Center the title */
+            margin-top: 20px; /* Add space at the top */
+        }
+
+        /* Style for the text description */
+        .description {
+            font-size: 15px; /* Adjust font size for mobile */
+            font-family: "Typo Formal", sans-serif; /* Specify the font for the description */
+            text-align: justify; /* Set text alignment to justify */
+            margin: 10px 20px; /* Add space around the description */
+        }
+
+        /* Style for the image container */
+        .image-container {
+            text-align: center; /* Center-align the images */
+            margin: 20px 0; /* Add space around the images */
+            position: relative; /* Create a positioning context for absolute elements */
+        }
+
+        /* Style for the slideshow images */
+        .slideshow-image {
+            max-width: 75%; /* Set max width to 100% for mobile responsiveness */
+            display: none; /* Hide images by default */
+            margin: 0 auto; /* Center the image horizontally */
+        }
+
+        /* Style for the navigation arrows */
+        .navigation-arrow {
+            cursor: pointer;
+            width: 40px; /* Adjust arrow size for mobile */
+            height: 40px; /* Adjust arrow size for mobile */
+            z-index: 1; /* Ensure arrows appear above images */
+            position: absolute; /* Position the arrows absolutely */
+            top: 50%; /* Align arrows vertically to the middle */
+            transform: translateY(-50%); /* Center vertically */
+        }
+
+        /* Style for the "Previous" arrow */
+        .prev-arrow {
+            left: 10px; /* Position "Previous" arrow to the left */
+        }
+
+        /* Style for the "Next" arrow */
+        .next-arrow {
+            right: 10px; /* Position "Next" arrow to the right */
+        }
+    </style>
+    <!-- Include your external JavaScript file -->
+    <script src="style.js"></script>
+    <!-- Include the Cocomat Ultralight and Typo Formal fonts using a CSS import or links to web font files if necessary -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cocomat+Ultralight&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Typo+Formal&display=swap">
+</head>
+<body>
+    <!-- Title "Asrama Mahasiswa Nusantara" -->
+    <div class="amn-title">
+        Rumah Tinggal dan Butik
+    </div>
+
+    <!-- Text description -->
+    <div class="description">
+        Rumah Tinggal dan Butik ini berlokasi di Jalan Sersan Bajuri, Bandung dan ditempati oleh sebuah keluarga
+        dengan 2 anak remaja. Sang ibu memiliki bisnis butik jas pria yang lokasinya dalam 1 site dengan rumah tinggal dan sang ayah memiliki
+        hobi berkebun. Desain ini mengambil sebuah tema 'Rest area' dimana keluarga menjadikan rumah ini checkpoint untuk tempat
+        beristirahat dan bisa melanjutkan aktivitas sehari-hari. Dalam site ini, disediakan tempat parkir untuk 3 mobil pengunjung
+        untuk butik / tamu rumah. Penggunaan Ramp yang berbelok-belok adalah respon terhadap site yang berkontur sehinga 
+        bisa memberikan pengalaman berjalan kaki sembari menikmati view sekitar tapak. Area servis ruamh dipisahkan sehingga tidak
+        mengganggu aktivitas yang terjadi di dalam zona rumah yang penuh aktivitas. Di depan butik, ada sebuah taman yang cukup
+        besar dan akses masuk pengunjung butik, diharuskan untuk melewati taman ini, sehingga menjadi visual tambahan yang bisa dinikmati
+        para pengunjung butik. Pengerjaan tugas ini diharuskan sepenuhnya gambar tangan manual.
+    </div>
+<br>
+    <!-- Image container for the slideshow -->
+    <div class="image-container">
+        <!-- "Previous" arrow image -->
+        <img class="navigation-arrow prev-arrow" src="leftarrow.png" alt="Previous">
+        <!-- Image slideshow -->
+        <div class="slideshow-image-container">
+            <!-- Current image count will be displayed here -->
+            <div class="image-count"></div>
+            <img class="slideshow-image" src="TAMPAK AB.jpg" alt="Image 1">
+                    <img class="slideshow-image" src="TAMPAK CD.jpg" alt="Image 2">
+                    <img class="slideshow-image" src="BLOKPLAN.jpg" alt="Image 3">
+                    <img class="slideshow-image" src="DENAH LANTAI DASAR.jpg" alt="Image 4">
+                    <img class="slideshow-image" src="DENAH LANTAI 2.jpg" alt="Image 5">
+                    <img class="slideshow-image" src="RENCANA TAPAK.jpg" alt="Image 6">
+                    <img class="slideshow-image" src="POTONGAN.jpg" alt="Image 7">
+                    <img class="slideshow-image" src="POTONGAN 2.jpg" alt="Image 8">
+                    <img class="slideshow-image" src="KISI KISI.jpg" alt="Image 9">
+                    <img class="slideshow-image" src="UTIL.jpg" alt="Image 10">
+                    <img class="slideshow-image" src="MAKET1.png" alt="Image 8">
+                    <img class="slideshow-image" src="MAKET2.jpg" alt="Image 8">
+                    <img class="slideshow-image" src="INTERIOR.jpg" alt="Image 8">
+                    <img class="slideshow-image" src="PERSPEKTIF.jpg" alt="Image 8">
+                    <img class="slideshow-image" src="KONSEP.jpg" alt="Image 8">
+        </div>
+        <!-- "Next" arrow image -->
+        <img class="navigation-arrow next-arrow" src="rightarrow.png" alt="Next">
+    </div>
+
+    <!-- JavaScript for image slideshow -->
+    <script>
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.slideshow-image');
+        const prevArrow = document.querySelector('.prev-arrow');
+        const nextArrow = document.querySelector('.next-arrow');
+
+        function showImage(index) {
+            images.forEach((image, i) => {
+                if (i === index) {
+                    image.style.display = 'block';
+                } else {
+                    image.style.display = 'none';
+                }
+            });
+        }
+
+        // Initial display
+        showImage(currentImageIndex);
+
+        // Function to navigate to the previous image
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            showImage(currentImageIndex);
+        }
+
+        // Function to navigate to the next image
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            showImage(currentImageIndex);
+        }
+
+        // Add event listeners for arrow clicks
+        prevArrow.addEventListener('click', prevImage);
+        nextArrow.addEventListener('click', nextImage);
+    </script>
+    </body>
+</html>
