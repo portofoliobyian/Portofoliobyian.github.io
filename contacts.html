@@ -30,38 +30,45 @@
             padding: 0 2cm;
         }
 
-        .hello-text {
-            font-size: 50px;
-            font-weight: bold;
+        .showcase-text {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-top: 6em; /* Adjusted for navigation bar */
             margin-bottom: 1em;
+            margin-left: 2cm; /* Align to the left */
         }
 
-        .instagram-preview {
-            display: flex; /* Use flexbox */
-            justify-content: center; /* Center align horizontally */
-            align-items: center; /* Center align vertically */
-            padding: 2em;
-            border-radius: 12px;
-            text-align: center;
-            transition: background 0.3s;
-            margin: 0 auto; /* Center the container */
+        .horizontal-line {
+            border: 0;
+            height: 1px;
+            background: white;
+            margin: 0 5%; /* Add space on the left and right */
+            margin-bottom: 1em; /* Add bottom margin */
         }
 
-        .instagram-preview iframe {
-            border-radius: 12px;
-            width: 320px;
-            height: 550px; /* Set height to display the full post */
-            border: none;
-            overflow: hidden;
+        .clickable-link {
+            margin-bottom: 1em;
+            margin-left: 2cm; /* Align to the left */
         }
 
-        .contact-info {
-            margin-top: 2em;
+        .clickable-link a {
             font-size: 18px;
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            padding: 0.5em 1em; /* Add padding to create a box effect */
+            transition: color 0.3s; /* Smooth transition for text color */
+            border-radius: 12px; /* Rounded corners */
+            background: none;
         }
 
-        .contact-info p {
-            margin: 0.5em 0; /* Adjust spacing between paragraphs */
+        .clickable-link a:hover {
+            background: linear-gradient(270deg, black, #2f4f4f);
+            background-size: 400% 400%;
+            animation: hover-gradient 5s ease infinite;
+            color: white;
         }
 
         @media (max-width: 768px) {
@@ -70,17 +77,12 @@
                 font-size: 24px;
             }
 
-            .hello-text {
-                font-size: 40px;
+            .showcase-text {
+                margin-left: 1cm;
             }
 
-            .instagram-preview iframe {
-                width: 100%;
-                height: 550px; /* Ensure full height on smaller screens */
-            }
-
-            .contact-info {
-                font-size: 16px;
+            .clickable-link {
+                margin-left: 1cm;
             }
         }
 
@@ -89,22 +91,12 @@
                 font-size: 20px;
             }
 
-            .hello-text {
-                font-size: 30px;
+            .showcase-text {
+                margin-left: 0.5cm;
             }
 
-            .contact-info {
-                font-size: 14px;
-            }
-
-            .instagram-preview {
-                width: 90%; /* Ensure the container doesn't take full width */
-                padding: 1em; /* Reduce padding for smaller screens */
-            }
-
-            .instagram-preview iframe {
-                width: 100%; /* Set the iframe to take the full width of the container */
-                height: 550px; /* Ensure full height on mobile screens */
+            .clickable-link {
+                margin-left: 0.5cm;
             }
         }
     </style>
