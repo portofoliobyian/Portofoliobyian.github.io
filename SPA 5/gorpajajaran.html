@@ -53,10 +53,9 @@
 
         /* Style for the PDF iframe */
         .pdf-iframe {
-            width: 90%; /* Set width to 90% for responsiveness */
+            width: 100%; /* Set width to 100% for responsiveness */
             height: 100%; /* Full container height */
             border: none; /* Remove border from the iframe */
-            overflow: auto; /* Allow scrolling */
         }
 
         @media (max-width: 768px) {
@@ -69,8 +68,8 @@
                 font-size: 14px;
             }
 
-            .pdf-iframe {
-                height: 100%; /* Ensure full height on smaller screens */
+            .pdf-container {
+                height: 80vh; /* Adjust height for smaller screens */
             }
         }
 
@@ -84,8 +83,8 @@
                 font-size: 12px;
             }
 
-            .pdf-iframe {
-                height: 100%; /* Ensure full height on mobile screens */
+            .pdf-container {
+                height: 80vh; /* Adjust height for mobile screens */
             }
         }
     </style>
