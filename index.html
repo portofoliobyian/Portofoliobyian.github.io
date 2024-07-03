@@ -98,6 +98,30 @@
                 margin-left: 0.5cm;
             }
         }
+         /* Style for the navigation bar */
+         .navbar {
+            display: flex;
+            justify-content: flex-start; /* Align to the left */
+            padding: 1em 2cm;
+            position: fixed;
+            width: calc(100% - 4cm); /* Adjusted for body margin */
+            top: 60px; /* Positioned just below the top left title */
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1em; /* Add space between links */
+            transition: color 0.3s;
+            white-space: nowrap; /* Prevent text from wrapping */
+        }
+
+        .navbar a:hover {
+            color: #a9bcd0;
+        }
+
     </style>
 </head>
 <body>
