@@ -78,6 +78,7 @@
             top: 60px; /* Positioned just below the top left title */
             left: 0;
             z-index: 1000;
+            flex-wrap: nowrap; /* Prevent wrapping */
         }
 
         .navbar a {
@@ -85,6 +86,7 @@
             text-decoration: none;
             margin-left: 1em; /* Add space between links */
             transition: color 0.3s;
+            white-space: nowrap; /* Prevent text from wrapping */
         }
 
         .navbar a:hover {
@@ -140,14 +142,13 @@
             }
 
             .navbar {
-                flex-direction: column;
-                align-items: center;
                 padding: 1em 1cm;
-                width: 100%;
+                width: calc(100% - 2cm); /* Adjust for smaller padding */
             }
 
             .navbar a {
-                margin: 0.5em 0;
+                margin-left: 0.5em;
+                font-size: 14px; /* Reduce font size for smaller screens */
             }
 
             .main-content {
@@ -180,7 +181,13 @@
             }
 
             .navbar a {
-                margin: 0.3em 0;
+                margin-left: 0.3em;
+                font-size: 12px; /* Further reduce font size for mobile */
+            }
+
+            .main-content {
+                padding: 0 1cm;
+                margin-top: 12em;
             }
 
             .hello-text {
