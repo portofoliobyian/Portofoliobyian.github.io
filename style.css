@@ -261,8 +261,8 @@ body {
 .instagram-preview iframe {
     border-radius: 12px;
     width: 320px;
-    height: 250px; /* Set height to display the full post */
-    border: black;
+    height: 400px; /* Set height to display the full post */
+    border: none;
     overflow: hidden;
 }
 
