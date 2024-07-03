@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Ian's Portfolio</title>
+    <style>
+        /* Set a moving gradient background */
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes hover-gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        body {
+            background: linear-gradient(270deg, grey, #a9bcd0);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            color: white;
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-box {
+            background-color: rgba(105, 105, 105, 0.8);
+            width: 100%;
+            height: 120px; /* Height to cover just below the navigation bar */
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+
+        /* Style for the top left text "PORTFOLIOBYIAN" */
+        .top-left-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+            left: 2cm;
+            margin: 1em 0;
+            letter-spacing: 2px;
+            z-index: 1000;
+        }
+
+        .top-left-title span {
+            color: black; /* Change color of "BY" to black */
+        }
+
+        /* Style for the navigation bar */
+        .navbar {
+            display: flex;
+            justify-content: flex-start; /* Align to the left */
+            padding: 1em 2cm;
+            position: fixed;
+            width: calc(100% - 4cm); /* Adjusted for body margin */
+            top: 60px; /* Positioned just below the top left title */
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1em; /* Add space between links */
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #a9bcd0;
+        }
+
+        /* Style for the main content */
+        .main-content {
+            margin-top: 10em; /* Adjust for fixed navigation bar */
+            text-align: center;
+            padding: 0 2cm;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            justify-items: center;
+            margin: 2em 0;
+        }
+
+        .gallery-item {
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+    <!-- Include the Roboto and Oswald fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap">
+</head>
+<body>
+    <div class="top-box"></div>
+    <div class="top-left-title">PORTFOLIO<span>BY</span>IAN</div>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contacts.html">Contacts</a>
+    </div>
+    
+    <div class="main-content">
+        <div class="gallery">
+            <div class="gallery-item">
+                <a href="image1.html" target="_blank">
+                    <img src="image1.jpg" alt="NOT AVAILABLE YET">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="image2.html" target="_blank">
+                    <img src="image2.jpg" alt="NOT AVAILABLE YET">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="image3.html" target="_blank">
+                    <img src="image3.jpg" alt="NOT AVAILABLE YET">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="image4.html" target="_blank">
+                    <img src="image4.jpg" alt="NOT AVAILABLE YET">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="image5.html" target="_blank">
+                    <img src="image5.jpg" alt="NOT AVAILABLE YET">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="image6.html" target="_blank">
+                    <img src="image6.jpg" alt="NOT AVAILABLE YET">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="image7.html" target="_blank">
+                    <img src="image7.jpg" alt="NOT AVAILABLE YET">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="image8.html" target="_blank">
+                    <img src="image8.jpg" alt="NOT AVAILABLE YET">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="image9.html" target="_blank">
+                    <img src="image9.jpg" alt="NOT AVAILABLE YET">
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
