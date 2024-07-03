@@ -47,13 +47,16 @@
         .pdf-container {
             text-align: center; /* Center-align the PDF */
             margin: 20px 0; /* Add space around the PDF */
+            height: 100vh; /* Full viewport height */
+            overflow: hidden; /* Hide overflow to prevent double scrollbars */
         }
 
         /* Style for the PDF iframe */
         .pdf-iframe {
             width: 90%; /* Set width to 90% for responsiveness */
-            height: 800px; /* Set height for the PDF iframe */
+            height: 100%; /* Full container height */
             border: none; /* Remove border from the iframe */
+            overflow: auto; /* Allow scrolling */
         }
 
         @media (max-width: 768px) {
@@ -67,7 +70,7 @@
             }
 
             .pdf-iframe {
-                height: 600px;
+                height: 100%; /* Ensure full height on smaller screens */
             }
         }
 
@@ -82,7 +85,7 @@
             }
 
             .pdf-iframe {
-                height: 400px;
+                height: 100%; /* Ensure full height on mobile screens */
             }
         }
     </style>

@@ -136,6 +136,56 @@
             animation: hover-gradient 5s ease infinite;
             color: white;
         }
+
+        @media (max-width: 768px) {
+            /* Adjustments for tablets and smaller screens */
+            .top-left-title {
+                left: 1cm;
+                font-size: 24px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+                padding: 1em 1cm;
+                width: 100%;
+            }
+
+            .navbar a {
+                margin: 0.5em 0;
+            }
+
+            .showcase-text {
+                margin-left: 1cm;
+            }
+
+            .clickable-link {
+                margin-left: 1cm;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Adjustments for mobile phones */
+            .top-left-title {
+                font-size: 20px;
+            }
+
+            .navbar {
+                padding: 0.5em 0.5cm;
+            }
+
+            .navbar a {
+                margin: 0.3em 0;
+            }
+
+            .showcase-text {
+                margin-left: 0.5cm;
+            }
+
+            .clickable-link {
+                margin-left: 0.5cm;
+            }
+        }
     </style>
     <!-- Include the Roboto and Oswald fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">

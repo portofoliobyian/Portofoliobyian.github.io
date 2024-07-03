@@ -105,11 +105,14 @@
         }
 
         .instagram-preview {
-            display: inline-block;
+            display: flex; /* Use flexbox */
+            justify-content: center; /* Center align horizontally */
+            align-items: center; /* Center align vertically */
             padding: 2em;
             border-radius: 12px;
             text-align: center;
             transition: background 0.3s;
+            margin: 0 auto; /* Center the container */
         }
 
         .instagram-preview iframe {
@@ -186,6 +189,16 @@
 
             .contact-info {
                 font-size: 14px;
+            }
+
+            .instagram-preview {
+                width: 90%; /* Ensure the container doesn't take full width */
+                padding: 1em; /* Reduce padding for smaller screens */
+            }
+
+            .instagram-preview iframe {
+                width: 100%; /* Set the iframe to take the full width of the container */
+                height: auto; /* Maintain aspect ratio */
             }
         }
     </style>
