@@ -55,6 +55,36 @@
             height: 800px; /* Set height for the PDF iframe */
             border: none; /* Remove border from the iframe */
         }
+
+        @media (max-width: 768px) {
+            /* Adjustments for tablets and smaller screens */
+            .amn-title {
+                font-size: 24px;
+            }
+
+            .description {
+                font-size: 14px;
+            }
+
+            .pdf-iframe {
+                height: 600px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Adjustments for mobile phones */
+            .amn-title {
+                font-size: 20px;
+            }
+
+            .description {
+                font-size: 12px;
+            }
+
+            .pdf-iframe {
+                height: 400px;
+            }
+        }
     </style>
     <!-- Include the Cocomat Ultralight and Typo Formal fonts using a CSS import or links to web font files if necessary -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cocomat+Ultralight&display=swap">
