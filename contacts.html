@@ -18,24 +18,11 @@
             }
         }
 
-        @keyframes hover-gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
         body {
             background: linear-gradient(270deg, grey, #a9bcd0);
             background-size: 400% 400%;
             animation: gradient 10s ease infinite;
             color: white;
-            text-align: center;
             font-family: "Roboto", sans-serif;
             margin: 0;
             padding: 0;
@@ -72,19 +59,19 @@
         .navbar {
             display: flex;
             justify-content: flex-start; /* Align to the left */
+            align-items: center;
             padding: 1em 2cm;
             position: fixed;
             width: calc(100% - 4cm); /* Adjusted for body margin */
             top: 60px; /* Positioned just below the top left title */
             left: 0;
             z-index: 1000;
-            flex-wrap: nowrap; /* Prevent wrapping */
         }
 
         .navbar a {
             color: white;
             text-decoration: none;
-            margin-left: 1em; /* Add space between links */
+            margin-right: 1em; /* Add space between links */
             transition: color 0.3s;
             white-space: nowrap; /* Prevent text from wrapping */
         }
@@ -147,7 +134,7 @@
             }
 
             .navbar a {
-                margin-left: 0.5em;
+                margin-right: 0.5em;
                 font-size: 14px; /* Reduce font size for smaller screens */
             }
 
@@ -181,7 +168,7 @@
             }
 
             .navbar a {
-                margin-left: 0.3em;
+                margin-right: 0.3em;
                 font-size: 12px; /* Further reduce font size for mobile */
             }
 
