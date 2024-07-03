@@ -4,10 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacts - Ian's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-     <style>
-        @import url('https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap');
+    <style>
+        /* Set a moving gradient background */
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
 
+        body {
+            background: linear-gradient(270deg, grey, #a9bcd0);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            color: white;
+            font-family: "Roboto", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-box {
+            background-color: rgba(105, 105, 105, 0.8);
+            width: 100%;
+            height: 120px; /* Height to cover just below the navigation bar */
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+
+        /* Style for the top left text "PORTFOLIOBYIAN" */
         .top-left-title {
             font-family: 'Oswald', sans-serif;
             font-size: 30px;
@@ -24,82 +55,149 @@
             color: black; /* Change color of "BY" to black */
         }
 
+        /* Style for the navigation bar */
+        .navbar {
+            display: flex;
+            justify-content: flex-start; /* Align to the left */
+            padding: 1em 2cm;
+            position: fixed;
+            width: calc(100% - 4cm); /* Adjusted for body margin */
+            top: 60px; /* Positioned just below the top left title */
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1em; /* Add space between links */
+            transition: color 0.3s;
+            white-space: nowrap; /* Prevent text from wrapping */
+        }
+
+        .navbar a:hover {
+            color: #a9bcd0;
+        }
+
+        /* Style for the main content */
         .main-content {
             margin-top: 10em; /* Adjust for fixed navigation bar */
             text-align: center;
             padding: 0 2cm;
         }
 
-        .showcase-text {
-            font-family: 'Oswald', sans-serif;
-            font-size: 24px;
-            font-weight: 500;
-            text-transform: uppercase;
-            margin-top: 6em; /* Adjusted for navigation bar */
+        .hello-text {
+            font-size: 50px;
+            font-weight: bold;
             margin-bottom: 1em;
-            margin-left: 2cm; /* Align to the left */
         }
 
-        .horizontal-line {
-            border: 0;
-            height: 1px;
-            background: white;
-            margin: 0 5%; /* Add space on the left and right */
-            margin-bottom: 1em; /* Add bottom margin */
+        .instagram-preview {
+            display: flex; /* Use flexbox */
+            justify-content: center; /* Center align horizontally */
+            align-items: center; /* Center align vertically */
+            padding: 2em;
+            border-radius: 12px;
+            text-align: center;
+            transition: background 0.3s;
+            margin: 0 auto; /* Center the container */
         }
 
-        .clickable-link {
-            margin-bottom: 1em;
-            margin-left: 2cm; /* Align to the left */
+        .instagram-preview iframe {
+            border-radius: 12px;
+            width: 320px;
+            height: 400px; /* Adjust height for better display */
+            border: none;
+            overflow: hidden;
         }
 
-        .clickable-link a {
+        .contact-info {
+            margin-top: 2em;
             font-size: 18px;
-            text-decoration: none;
-            color: white;
-            display: inline-block;
-            padding: 0.5em 1em; /* Add padding to create a box effect */
-            transition: color 0.3s; /* Smooth transition for text color */
-            border-radius: 12px; /* Rounded corners */
-            background: none;
         }
 
-        .clickable-link a:hover {
-            background: linear-gradient(270deg, black, #2f4f4f);
-            background-size: 400% 400%;
-            animation: hover-gradient 5s ease infinite;
-            color: white;
+        .contact-info p {
+            margin: 0.5em 0; /* Adjust spacing between paragraphs */
         }
 
         @media (max-width: 768px) {
+            /* Adjustments for tablets and smaller screens */
             .top-left-title {
                 left: 1cm;
                 font-size: 24px;
             }
 
-            .showcase-text {
-                margin-left: 1cm;
+            .navbar {
+                padding: 1em 1cm;
+                width: calc(100% - 2cm); /* Adjust for smaller padding */
             }
 
-            .clickable-link {
-                margin-left: 1cm;
+            .navbar a {
+                margin-right: 0.5em;
+                font-size: 14px; /* Reduce font size for smaller screens */
+            }
+
+            .main-content {
+                padding: 0 1cm;
+                margin-top: 12em;
+            }
+
+            .hello-text {
+                font-size: 40px;
+            }
+
+            .instagram-preview iframe {
+                width: 100%;
+                height: 400px; /* Adjust height for better display */
+            }
+
+            .contact-info {
+                font-size: 16px;
             }
         }
 
         @media (max-width: 480px) {
+            /* Adjustments for mobile phones */
             .top-left-title {
                 font-size: 20px;
             }
 
-            .showcase-text {
-                margin-left: 0.5cm;
+            .navbar {
+                padding: 0.5em 0.5cm;
             }
 
-            .clickable-link {
-                margin-left: 0.5cm;
+            .navbar a {
+                margin-right: 0.3em;
+                font-size: 12px; /* Further reduce font size for mobile */
+            }
+
+            .main-content {
+                padding: 0 1cm;
+                margin-top: 12em;
+            }
+
+            .hello-text {
+                font-size: 30px;
+            }
+
+            .contact-info {
+                font-size: 14px;
+            }
+
+            .instagram-preview {
+                width: 90%; /* Ensure the container doesn't take full width */
+                padding: 1em; /* Reduce padding for smaller screens */
+            }
+
+            .instagram-preview iframe {
+                width: 100%; /* Set the iframe to take the full width of the container */
+                height: 400px; /* Adjust height for better display */
             }
         }
     </style>
+    <!-- Include the Roboto and Oswald fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap">
 </head>
 <body>
     <div class="top-box"></div>
@@ -113,7 +211,7 @@
     <div class="main-content">
         <div class="hello-text">HELLO!</div>
         <div class="instagram-preview">
-            <iframe src="https://www.instagram.com/p/C5XcbS1rbED/embed" allowtransparency="true"></iframe>
+            <iframe src="https://www.instagram.com/p/C5XcbS1rbED/embed" allowtransparency="true" style="width: 100%; max-width: 320px; height: 400px;"></iframe>
         </div>
         <div class="contact-info">
             <p>If you want to talk personally please reach me via DM on Instagram, but here's a few more ways to reach me!</p>
