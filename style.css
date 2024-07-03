@@ -40,3 +40,116 @@
 .next-arrow {
     right: 10px; /* Position "Next" arrow to the right */
 }
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap');
+
+/* Set a moving gradient background */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background: linear-gradient(270deg, grey, #a9bcd0);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top-box {
+    background-color: rgba(105, 105, 105, 0.8);
+    width: 100%;
+    height: 120px; /* Height to cover just below the navigation bar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+/* Style for the top left text "PORTFOLIOBYIAN" */
+.top-left-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 2cm;
+    margin: 1em 0;
+    letter-spacing: 2px;
+    z-index: 1000;
+}
+
+.top-left-title span {
+    color: black; /* Change color of "BY" to black */
+}
+
+/* Style for the navigation bar */
+.navbar {
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    align-items: center;
+    padding: 1em 2cm;
+    position: fixed;
+    width: calc(100% - 4cm); /* Adjusted for body margin */
+    top: 60px; /* Positioned just below the top left title */
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    font-family: 'Oswald', sans-serif; /* Apply Oswald font to the navigation links */
+    color: white;
+    text-decoration: none;
+    margin: 0 1em; /* Add space between links */
+    transition: color 0.3s;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.navbar a:hover {
+    color: #a9bcd0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .top-left-title {
+        left: 1cm;
+        font-size: 24px;
+    }
+
+    .navbar {
+        padding: 1em 1cm;
+        width: calc(100% - 2cm); /* Adjust for smaller padding */
+    }
+
+    .navbar a {
+        margin: 0 0.5em;
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .top-left-title {
+        font-size: 20px;
+    }
+
+    .navbar {
+        padding: 0.5em 0.5cm;
+    }
+
+    .navbar a {
+        margin: 0 0.3em;
+        font-size: 12px; /* Further reduce font size for mobile */
+    }
+}

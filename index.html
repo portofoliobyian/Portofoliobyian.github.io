@@ -4,53 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio by Ian</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* Set a moving gradient background */
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
+        @import url('https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap');
 
-        @keyframes hover-gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        body {
-            background: linear-gradient(270deg, grey, #a9bcd0);
-            background-size: 400% 400%;
-            animation: gradient 10s ease infinite;
-            color: white;
-            font-family: "Roboto", sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        .top-box {
-            background-color: rgba(105, 105, 105, 0.8);
-            width: 100%;
-            height: 120px; /* Height to cover just below the navigation bar */
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 999;
-        }
-
-        /* Style for the top left text "PORTFOLIOBYIAN" */
         .top-left-title {
             font-family: 'Oswald', sans-serif;
             font-size: 30px;
@@ -67,39 +24,12 @@
             color: black; /* Change color of "BY" to black */
         }
 
-        /* Style for the navigation bar */
-        .navbar {
-            display: flex;
-            justify-content: flex-start; /* Align to the left */
-            align-items: center;
-            padding: 1em 2cm;
-            position: fixed;
-            width: calc(100% - 4cm); /* Adjusted for body margin */
-            top: 60px; /* Positioned just below the top left title */
-            left: 0;
-            z-index: 1000;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            margin-right: 1em; /* Add space between links */
-            transition: color 0.3s;
-            white-space: nowrap; /* Prevent text from wrapping */
-        }
-
-        .navbar a:hover {
-            color: #a9bcd0;
-        }
-
-        /* Style for the main content */
         .main-content {
             margin-top: 10em; /* Adjust for fixed navigation bar */
             text-align: center;
             padding: 0 2cm;
         }
 
-        /* Style for the showcase text */
         .showcase-text {
             font-family: 'Oswald', sans-serif;
             font-size: 24px;
@@ -110,7 +40,6 @@
             margin-left: 2cm; /* Align to the left */
         }
 
-        /* Style for the horizontal line */
         .horizontal-line {
             border: 0;
             height: 1px;
@@ -119,13 +48,11 @@
             margin-bottom: 1em; /* Add bottom margin */
         }
 
-        /* Style for the clickable link */
         .clickable-link {
             margin-bottom: 1em;
             margin-left: 2cm; /* Align to the left */
         }
 
-        /* Style for the clickable link text */
         .clickable-link a {
             font-size: 18px;
             text-decoration: none;
@@ -137,7 +64,6 @@
             background: none;
         }
 
-        /* Hover effect for the clickable link */
         .clickable-link a:hover {
             background: linear-gradient(270deg, black, #2f4f4f);
             background-size: 400% 400%;
@@ -146,21 +72,9 @@
         }
 
         @media (max-width: 768px) {
-            /* Adjustments for tablets and smaller screens */
             .top-left-title {
                 left: 1cm;
                 font-size: 24px;
-            }
-
-            .navbar {
-                padding: 1em 1cm;
-                width: calc(100% - 2cm); /* Adjust for smaller padding */
-                justify-content: center; /* Center the items */
-            }
-
-            .navbar a {
-                margin: 0 0.5em;
-                font-size: 14px; /* Reduce font size for smaller screens */
             }
 
             .showcase-text {
@@ -173,19 +87,8 @@
         }
 
         @media (max-width: 480px) {
-            /* Adjustments for mobile phones */
             .top-left-title {
                 font-size: 20px;
-            }
-
-            .navbar {
-                padding: 0.5em 0.5cm;
-                justify-content: center; /* Center the items */
-            }
-
-            .navbar a {
-                margin: 0 0.3em;
-                font-size: 12px; /* Further reduce font size for mobile */
             }
 
             .showcase-text {
@@ -197,9 +100,6 @@
             }
         }
     </style>
-    <!-- Include the Roboto and Oswald fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap">
 </head>
 <body>
     <div class="top-box"></div>
@@ -213,35 +113,28 @@
     <div class="showcase-text">Showcase</div>
     <hr class="horizontal-line">
 
-    <!-- Clickable link -->
     <div class="clickable-link">
         <a href="SPA 5/gorpajajaran.html" target="_blank">Tugas Studio 5 - Revitalisasi Gor Padjajaran</a>
     </div>
 
-    <!-- Clickable link -->
     <div class="clickable-link">
         <a href="SPA4/AMN.html" target="_blank">Tugas Studio 4 - Asrama Mahasiswa Nusantara</a>
     </div>
 
-    <!-- Clickable link -->
     <div class="clickable-link">
         <a href="SPA3/rumahdanbutik.html" target="_blank">Tugas Studio 3 - Rumah Tinggal dan Butik</a>
     </div>
 
-    <!-- Clickable link -->
     <div class="clickable-link">
         <a href="SPA2.3/Pondokkerja.html" target="_blank">Tugas Studio 2 - Pondok Kerja</a>
     </div>
 
-    <!-- Clickable link -->
     <div class="clickable-link">
         <a href="SPA2.2/LoketTiket.html" target="_blank">Tugas Studio 2 - Loket Tiket</a>
     </div>
 
-    <!-- Clickable link -->
     <div class="clickable-link">
         <a href="SPA1/YOGAPOD.html" target="_blank">Tugas Studio 1 - Yoga Pod</a>
     </div>
-    <!-- Add the rest of your portfolio content here -->
 </body>
 </html>
