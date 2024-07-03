@@ -120,36 +120,3 @@ body {
 .navbar a:hover {
     color: #a9bcd0;
 }
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-    .top-left-title {
-        left: 1cm;
-        font-size: 24px;
-    }
-
-    .navbar {
-        padding: 1em 1cm;
-        width: calc(100% - 2cm); /* Adjust for smaller padding */
-    }
-
-    .navbar a {
-        margin: 0 0.5em;
-        font-size: 14px; /* Reduce font size for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .top-left-title {
-        font-size: 20px;
-    }
-
-    .navbar {
-        padding: 0.5em 0.5cm;
-    }
-
-    .navbar a {
-        margin: 0 0.3em;
-        font-size: 12px; /* Further reduce font size for mobile */
-    }
-}
