@@ -261,7 +261,7 @@ body {
 .instagram-preview iframe {
     border-radius: 12px;
     width: 320px;
-    height: 60%; /* Set height to display the full post */
+    height: 250px; /* Set height to display the full post */
     border: black;
     overflow: hidden;
 }
@@ -273,4 +273,31 @@ body {
 
 .contact-info p {
     margin: 0.5em 0; /* Adjust spacing between paragraphs */
+}
+
+@media (max-width: 768px) {
+    .instagram-preview iframe {
+        width: 90%;
+        height: 300px; /* Ensure full height on smaller screens */
+    }
+
+    .contact-info {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .instagram-preview {
+        width: 90%; /* Ensure the container doesn't take full width */
+        padding: 1em; /* Reduce padding for smaller screens */
+    }
+
+    .instagram-preview iframe {
+        width: 100%; /* Set the iframe to take the full width of the container */
+        height: 300px; /* Ensure full height on mobile screens */
+    }
+
+    .contact-info {
+        font-size: 14px;
+    }
 }
