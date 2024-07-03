@@ -98,8 +98,8 @@ body {
 /* Style for the navigation bar */
 .navbar {
     display: flex;
-    justify-content: flex-start; /* Align to the left */
-    align-items: center;
+    justify-content: left; /* Center the items */
+    align-items: left;
     padding: 1em 2cm;
     position: fixed;
     width: calc(100% - 4cm); /* Adjusted for body margin */
@@ -150,5 +150,154 @@ body {
     .navbar a {
         margin: 0 0.3em;
         font-size: 12px; /* Further reduce font size for mobile */
+    }
+}
+
+/* Specific content styles for each page */
+
+.main-content {
+    margin-top: 10em; /* Adjust for fixed navigation bar */
+    text-align: center;
+    padding: 0 2cm;
+}
+
+.showcase-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 6em; /* Adjusted for navigation bar */
+    margin-bottom: 1em;
+    margin-left: 2cm; /* Align to the left */
+}
+
+.horizontal-line {
+    border: 0;
+    height: 1px;
+    background: white;
+    margin: 0 5%; /* Add space on the left and right */
+    margin-bottom: 1em; /* Add bottom margin */
+}
+
+.clickable-link {
+    margin-bottom: 1em;
+    margin-left: 2cm; /* Align to the left */
+}
+
+.clickable-link a {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 0.5em 1em; /* Add padding to create a box effect */
+    transition: color 0.3s; /* Smooth transition for text color */
+    border-radius: 12px; /* Rounded corners */
+    background: none;
+}
+
+.clickable-link a:hover {
+    background: linear-gradient(270deg, black, #2f4f4f);
+    background-size: 400% 400%;
+    animation: hover-gradient 5s ease infinite;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .showcase-text {
+        margin-left: 1cm;
+    }
+
+    .clickable-link {
+        margin-left: 1cm;
+    }
+}
+
+@media (max-width: 480px) {
+    .showcase-text {
+        margin-left: 0.5cm;
+    }
+
+    .clickable-link {
+        margin-left: 0.5cm;
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    margin: 2em 0;
+}
+
+.gallery-item {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+.instagram-preview {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center align horizontally */
+    align-items: center; /* Center align vertically */
+    padding: 2em;
+    border-radius: 12px;
+    text-align: center;
+    transition: background 0.3s;
+    margin: 0 auto; /* Center the container */
+}
+
+.instagram-preview iframe {
+    border-radius: 12px;
+    width: 320px;
+    height: 400px; /* Set height to display the full post */
+    border: black;
+    overflow: hidden;
+}
+
+.contact-info {
+    margin-top: 2em;
+    font-size: 18px;
+}
+
+.contact-info p {
+    margin: 0.5em 0; /* Adjust spacing between paragraphs */
+}
+
+@media (max-width: 768px) {
+    .instagram-preview iframe {
+        width: 90%;
+        height: 300px; /* Ensure full height on smaller screens */
+    }
+
+    .contact-info {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .instagram-preview {
+        width: 90%; /* Ensure the container doesn't take full width */
+        padding: 1em; /* Reduce padding for smaller screens */
+    }
+
+    .instagram-preview iframe {
+        width: 100%; /* Set the iframe to take the full width of the container */
+        height: 300px; /* Ensure full height on mobile screens */
+    }
+
+    .contact-info {
+        font-size: 14px;
     }
 }
