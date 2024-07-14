@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revitalisasi Gor Padjajaran</title>
+    <style>
+        /* Set the background color to white and text color to black */
+        body {
+            background-color: white;
+            color: black;
+            text-align: left; /* Left alignment */
+            font-family: "Cocomat Ultralight", sans-serif; /* Specify the font for the body */
+            margin: 0; /* Remove margins for a full-width experience */
+            padding: 0; /* Remove padding for a full-width experience */
+        }
+
+        /* Style for the title "Revitalisasi Gor Padjajaran" */
+        .amn-title {
+            font-size: 30px; /* Adjust font size for mobile */
+            text-align: center; /* Center the title */
+            margin-top: 20px; /* Add space at the top */
+        }
+
+        /* Style for the video container */
+        .video-container {
+            text-align: center; /* Center-align the video */
+            margin: 20px 0; /* Add space around the video */
+        }
+
+        /* Style for the video element */
+        .video-element {
+            width: 90%; /* Set width to 90% for responsiveness */
+            max-width: 800px; /* Set max width for larger screens */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Style for the text description */
+        .description {
+            font-size: 15px; /* Adjust font size for mobile */
+            font-family: "Typo Formal", sans-serif; /* Specify the font for the description */
+            text-align: justify; /* Set text alignment to justify */
+            margin: 10px 20px; /* Add space around the description */
+        }
+
+        /* Style for the PDF container */
+        .pdf-container {
+            text-align: center; /* Center-align the PDF */
+            margin: 20px 0; /* Add space around the PDF */
+            height: 100vh; /* Full viewport height */
+            overflow: hidden; /* Hide overflow to prevent double scrollbars */
+        }
+
+        /* Style for the PDF iframe */
+        .pdf-iframe {
+            width: 100%; /* Set width to 100% for responsiveness */
+            height: 100%; /* Full container height */
+            border: none; /* Remove border from the iframe */
+        }
+
+        @media (max-width: 768px) {
+            /* Adjustments for tablets and smaller screens */
+            .amn-title {
+                font-size: 24px;
+            }
+
+            .description {
+                font-size: 14px;
+            }
+
+            .pdf-container {
+                height: 80vh; /* Adjust height for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Adjustments for mobile phones */
+            .amn-title {
+                font-size: 20px;
+            }
+
+            .description {
+                font-size: 12px;
+            }
+
+            .pdf-container {
+                height: 80vh; /* Adjust height for mobile screens */
+            }
+        }
+    </style>
+    <!-- Include the Cocomat Ultralight and Typo Formal fonts using a CSS import or links to web font files if necessary -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cocomat+Ultralight&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Typo+Formal&display=swap">
+</head>
+<body>
+    <!-- Title "Revitalisasi Gor Padjajaran" -->
+    <div class="amn-title">
+        4 Star Hotel at Jalan Tamblong
+    </div>
+
+    <!-- Text description -->
+    <div class="description">
+        This Project took place in Jalan Tamblong, Bandung. This 4 star Hotel design elements is very much inspired by the Pompidou Centre design which creates a sense of honesty just by viewing the exposed elements of the design, 
+        and most importantly, giving new experiences for Hotel guests and every staff working inside the hotel.
+        The site has a class c heritage buildings that must be conserved especially the facade element. So instead of demolishing it, I decided to make it as a cafe for a bonus facility for the hotel.
+        The shape of the building is formed by the smallest unit designed, arranged in a certain pattern creating a unique look for the facade when casts by shadows and light.
+        The exposed plumbing is part of the design to experiment in hope of easier maintenance and new unique visual experience for everyone.
+        putting the interior elements as a part of the facade and the other way around was the whole idea of the design. The corridor path took form from a branch of a tree,
+        creating a new experience when you walk with the voids around you.
+    </div>    
+
+    <!-- PDF container -->
+    <div class="pdf-container">
+        <iframe class="pdf-iframe" src="Hotelbintang4.pdf"></iframe>
+    </div>
+</body>
+</html>
