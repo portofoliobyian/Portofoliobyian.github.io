@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remnant of the Past Beacon of The Future</title>
+    <style>
+        /* Dark mode background and text color */
+        body {
+            background-color: #121212; /* Dark background */
+            color: #f5f5f5; /* Light text color */
+            text-align: left;
+            font-family: "Cocomat Ultralight", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Wrapper for all content except the full-screen image */
+        .content-container {
+            transition: filter 0.5s ease; /* Smooth transition for blur effect */
+        }
+
+        /* Style for the title with a more bold and minimalistic font */
+        .amn-title {
+            font-size: 36px;
+            text-align: center;
+            margin-top: 20px;
+            font-family: "Roboto", sans-serif; /* Minimalistic, bold font */
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #f5f5f5; /* Light title text for dark mode */
+        }
+
+        /* Style for the text description */
+        .description {
+            font-size: 15px;
+            font-family: "Typo Formal", sans-serif;
+            text-align: justify;
+            margin: 10px 20px;
+        }
+
+        /* Korean translation text */
+        .description-korean {
+            font-size: 15px;
+            font-family: "Typo Formal", sans-serif;
+            text-align: justify;
+            margin: 10px 20px;
+            color: #b0b0b0; /* Slightly dimmed color for translation text */
+        }
+
+        /* Style for the 3x3 grid */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 20px;
+        }
+
+        /* Style for each image in the grid */
+        .grid-image {
+            width: 100%;
+            height: 200px; /* Fixed height for all images */
+            object-fit: cover; /* Ensures all images have the same aspect ratio */
+            border-radius: 15px; /* Add curved edges */
+            cursor: pointer;
+            transition: transform 0.3s ease, border-radius 0.3s ease; /* Add zoom effect on hover */
+        }
+
+        .grid-image:hover {
+            transform: scale(1.1); /* Slight zoom on hover */
+        }
+
+        /* Style for the full-screen image */
+        .fullscreen-image {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80vw;
+            height: 80vh;
+            z-index: 10;
+            display: none;
+            transition: transform 0.3s ease; /* Add smooth zoom */
+        }
+
+        /* When active, display the full-screen image */
+        .fullscreen-active {
+            display: block;
+        }
+
+        /* Blurred background */
+        .blurred {
+            filter: blur(5px);
+        }
+
+        /* Overlay to capture clicks outside the image */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+            z-index: 5;
+            display: none;
+        }
+
+        .overlay-active {
+            display: block;
+        }
+
+        /* Style for the PDF container */
+        .pdf-container {
+            text-align: center;
+            margin: 20px 0;
+            width: 100%;
+            min-height: 500px;
+            height: 80vh;
+            overflow: hidden;
+        }
+
+        /* Style for the PDF iframe */
+        .pdf-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .amn-title {
+                font-size: 24px;
+            }
+
+            .description, .description-korean {
+                font-size: 14px;
+            }
+
+            .pdf-container {
+                height: 70vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .amn-title {
+                font-size: 20px;
+            }
+
+            .description, .description-korean {
+                font-size: 12px;
+            }
+
+            .pdf-container {
+                height: 60vh;
+                min-height: 400px;
+            }
+        }
+    </style>
+    <!-- Include Google fonts for "Roboto" font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap">
+</head>
+<body>
+    <!-- Content wrapper -->
+    <div class="content-container">
+        <!-- Title -->
+        <div class="amn-title">
+            Banggudae Petroglyphs Visitor Centre
+        </div>
+
+        <!-- Text description -->
+        <div class="description">
+            This project is located at the Petroglyphs of Bangudae Terrace in Daegok-ri, Ulju. The inspiration for this design came from the concern over the diminishing appeal of this place for future generations. This fear arose during my first visit to the site, where I observed that 90% of the visitors and caretakers were elderly. Therefore, this design aims to revive the site's attraction for younger generations, breathing new life into it. The design approach emerged from the dull walking experience from the museum to the observatory deck to view the petroglyphs.
+        </div>
+
+        <!-- Korean translation text -->
+        <div class="description-korean">
+            이 프로젝트는 울주 대곡리 방구대 암각화 테라스에 위치하고 있습니다. 이 디자인의 영감은 미래 세대를 위한 이 장소의 매력이 점점 사라지고 있다는 우려에서 비롯되었습니다. 이 두려움은 제가 처음 현장을 방문했을 때 생겼는데, 당시 방문객과 시설 관리자의 90%가 노인이라는 것을 보았습니다. 따라서 이 디자인은 이곳의 매력을 젊은 세대에게 다시 불러일으켜 이곳에 새로운 활력을 불어넣는 것을 목표로 하고 있습니다. 디자인 접근 방식은 박물관에서 암각화를 보기 위해 전망대로 가는 지루한 보행 경험에서 출발했습니다.
+        </div>
+
+        <!-- Image grid -->
+        <div class="image-grid">
+            <img src="5547_0.jpg" alt="Image 1" class="grid-image">
+            <img src="5548_0.jpg" alt="Image 2" class="grid-image">
+            <img src="5549_0.jpg" alt="Image 3" class="grid-image">
+            <img src="5550_0.jpg" alt="Image 4" class="grid-image">
+            <img src="5551_0.jpg" alt="Image 5" class="grid-image">
+            <img src="5552_0.jpg" alt="Image 6" class="grid-image">
+            <img src="5553_0.jpg" alt="Image 7" class="grid-image">
+            <img src="5554_0.jpg" alt="Image 8" class="grid-image">
+            <img src="5565.jpg" alt="Image 9" class="grid-image">
+        </div>
+
+        <!-- PDF container -->
+        <div class="pdf-container">
+            <iframe class="pdf-iframe" src="IAWPRESENTATION.pdf"></iframe>
+        </div>
+    </div>
+
+    <!-- Overlay to blur background -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Full-screen image container -->
+    <img src="" alt="Full-screen" class="fullscreen-image" id="fullscreenImage">
+
+    <script>
+        // JavaScript to handle image click and full-screen mode
+        const images = document.querySelectorAll('.grid-image');
+        const fullscreenImage = document.getElementById('fullscreenImage');
+        const overlay = document.getElementById('overlay');
+        const contentContainer = document.querySelector('.content-container');
+
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                fullscreenImage.src = image.src;
+                fullscreenImage.classList.add('fullscreen-active');
+                overlay.classList.add('overlay-active');
+                contentContainer.classList.add('blurred');
+            });
+        });
+
+        // Close full-screen image when clicking outside
+        overlay.addEventListener('click', () => {
+            fullscreenImage.classList.remove('fullscreen-active');
+            overlay.classList.remove('overlay-active');
+            contentContainer.classList.remove('blurred');
+        });
+    </script>
+</body>
+</html>

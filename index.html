@@ -48,9 +48,27 @@
             margin-bottom: 1em; /* Add bottom margin */
         }
 
+        /* Left and right columns */
+        .left-column, .right-column {
+            width: 50%; /* Equal width for both columns */
+            padding: 2em;
+            box-sizing: border-box; /* Include padding in width calculation */
+            float: left; /* Float columns side by side */
+        }
+
+        .project-title, .right-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 1em;
+            color: white;
+            text-transform: uppercase;
+            text-align: center; /* Center the titles in their respective columns */
+        }
+
         .clickable-link {
             margin-bottom: 1em;
-            margin-left: 2cm; /* Align to the left */
+            text-align: center; /* Center the links horizontally */
         }
 
         .clickable-link a {
@@ -80,8 +98,13 @@
                 margin-left: 1cm;
             }
 
+            .left-column, .right-column {
+                width: 100%; /* Full width for both columns on small screens */
+                float: none;
+            }
+
             .clickable-link {
-                margin-left: 1cm;
+                margin-left: 0;
             }
         }
 
@@ -98,8 +121,9 @@
                 margin-left: 0.5cm;
             }
         }
-         /* Style for the navigation bar */
-         .navbar {
+
+        /* Style for the navigation bar */
+        .navbar {
             display: flex;
             justify-content: flex-start; /* Align to the left */
             padding: 1em 2cm;
@@ -121,6 +145,13 @@
         .navbar a:hover {
             color: #a9bcd0;
         }
+
+        /* Clear floats after the columns */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
         
     </style>
 </head>
@@ -135,32 +166,41 @@
     <div class="showcase-text">Showcase</div>
     <hr class="horizontal-line">
 
-    <div class="clickable-link">
-        <a href="SPA 6/hotelbintang4.html" target="_blank">Studio Project 6 - 4 Star Hotel</a>
-    </div>
+    <!-- Main container with two equal columns -->
+    <div class="clearfix">
+        <!-- Left column with clickable links -->
+        <div class="left-column">
+            <div class="project-title">College Conceptual Works</div>
+            <div class="clickable-link">
+                <a href="SPA 6/hotelbintang4.html" target="_blank">Studio Project 6 - 4 Star Hotel</a>
+            </div>
+            <div class="clickable-link">
+                <a href="SPA 5/gorpajajaran.html" target="_blank">Studio Project 5 - Revitalisasi Gor Padjajaran</a>
+            </div>
+            <div class="clickable-link">
+                <a href="SPA4/AMN.html" target="_blank">Studio Project 4 - Asrama Mahasiswa Nusantara</a>
+            </div>
+            <div class="clickable-link">
+                <a href="SPA3/rumahdanbutik.html" target="_blank">Studio Project 3 - Rumah Tinggal dan Butik</a>
+            </div>
+            <div class="clickable-link">
+                <a href="SPA2.3/Pondokkerja.html" target="_blank">Studio Project 2 - Pondok Kerja</a>
+            </div>
+            <div class="clickable-link">
+                <a href="SPA2.2/LoketTiket.html" target="_blank">Studio Project 2 - Loket Tiket</a>
+            </div>
+            <div class="clickable-link">
+                <a href="SPA1/YOGAPOD.html" target="_blank">Studio Project 1 - Yoga Pod</a>
+            </div>
+        </div>
 
-    <div class="clickable-link">
-        <a href="SPA 5/gorpajajaran.html" target="_blank">Studio Project 5 - Revitalisasi Gor Padjajaran</a>
-    </div>
-
-    <div class="clickable-link">
-        <a href="SPA4/AMN.html" target="_blank">Studio Project 4 - Asrama Mahasiswa Nusantara</a>
-    </div>
-
-    <div class="clickable-link">
-        <a href="SPA3/rumahdanbutik.html" target="_blank">Studio Project 3 - Rumah Tinggal dan Butik</a>
-    </div>
-
-    <div class="clickable-link">
-        <a href="SPA2.3/Pondokkerja.html" target="_blank">Studio Project 2 - Pondok Kerja</a>
-    </div>
-
-    <div class="clickable-link">
-        <a href="SPA2.2/LoketTiket.html" target="_blank">Studio Project 2 - Loket Tiket</a>
-    </div>
-
-    <div class="clickable-link">
-        <a href="SPA1/YOGAPOD.html" target="_blank">Studio Project 1 - Yoga Pod</a>
+        <!-- Right column with clickable links for "Projects and Workshops" -->
+        <div class="right-column">
+            <div class="right-title">Projects and Workshops</div>
+            <div class="clickable-link">
+                <a href="IAW/IAW.html" target="_blank">International Architecture Workshop 2024 울산, South Korea</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
